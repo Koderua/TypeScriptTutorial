@@ -59,3 +59,11 @@ let employee2: {
     jobTitle: 'Web Dev'
 }
 
+// error when trying to access property on empty type object
+let obj:{};
+obj.name = 'John';
+// Property 'name' does not exist on type '{}'.ts(2339)
+// accessing 'Object' type methods on empty type via 'prototype chain'
+let vacant: {} = {}
+console.log(vacant.toString());
+// [object Object]
